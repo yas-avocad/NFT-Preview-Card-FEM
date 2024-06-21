@@ -1,0 +1,251 @@
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  background-color: var(--Very-dark-blue-main-BG);
+ }
+
+ main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Very-dark-blue-card-BG);
+  padding: 24px 25px 24px 24px;
+  border-radius: 15px;
+  font-family: outfit;
+ }
+
+/****
+IMAGE
+****/
+
+.product-image {
+  border-radius: 8px;
+  height: 278px;
+  width: 278px;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+}
+
+.image-link {
+  display: block;
+  position: relative;
+}
+
+.image-link:hover:before {
+content: " ";
+position: absolute;
+height: 100%;
+width: 100%;
+background-color:  hsl(178, 100%, 50%, .503);
+border-radius: 8px;
+
+}
+
+.image-link:hover:after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+
+
+}
+
+
+/****
+INFO
+****/
+
+.NFT-info {
+  margin-top: 24px;
+}
+
+h1 {
+  color: white;
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color .10s;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1:hover {
+  color: var(--Cyan);
+}
+
+h1:active {
+  color: var(--Cyan);
+}
+
+.description {
+  color: var(--Soft-blue);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 26px;
+  max-width: 278px;
+  margin-bottom: 16px;
+}
+
+/***
+STATS
+****/
+
+.stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.ethereum-text {
+  color: var(--Cyan);
+  font-size: .9375rem;
+  font-weight: 600;
+}
+
+.ethereum-containter {
+  display: flex;
+  flex-direction: row;
+  gap: 6.48px;
+}
+
+.remaining-time-text {
+  color: var(--Soft-blue);
+  font-size: .9375rem;
+}
+
+.remaining-time-container {
+  display: flex;
+  flex-direction: row;
+  gap: 7.7px;
+}
+
+/****
+PAGE-BREAK
+****/
+
+.page-break {
+  background-color: var(--Very-dark-blue-line);
+   height: 1px;
+}
+
+/****
+CREATOR
+****/
+
+.creator {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile-picture {
+  height: 33px;
+  width: 33px;
+  border: white 1px inset;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+.creator-credit {
+  color: var(--Soft-blue);
+  font-size: .9375rem;
+}
+
+span {
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: color .10s;
+}
+
+span:hover {
+  color: var(--Cyan);
+}
+
+span:active {
+  color: var(--Cyan);
+}
+
+
+@media (min-width: 800px) {
+
+  
+   main {
+    padding: 24px 24px 32px 24px;
+   }
+  
+  /****
+  IMAGE
+  ****/
+  
+  .product-image {
+    height: 302px;
+    width: 302px;
+  }
+ 
+  /****
+  INFO
+  ****/
+  
+  h1 {
+    font-size: 1.375rem;
+    margin-bottom: 16px;
+  }
+  
+  .description {
+    max-width: 302px;
+    margin-bottom: 24px;
+  }
+  
+  /***
+  STATS
+  ****/
+  
+  .stats-container {
+    margin-bottom: 24px;
+  }
+  
+  .ethereum-text {
+    font-size: 1rem;
+  }
+  
+  .remaining-time-text {
+    font-size: 1rem;
+  }
+
+  /****
+  CREATOR
+  ****/
+  
+  .creator-credit {
+    font-size: 1rem;
+  }
+
+}
